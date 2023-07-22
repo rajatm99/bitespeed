@@ -1,3 +1,4 @@
+import { httpResponse } from "./common"
 
 export interface IdentifyContactRequest {
     email ? : string,
@@ -9,8 +10,4 @@ export interface Contact {
     emails : string[],
     phoneNumbers : string[],
     secondaryContactIDs : number[]
-}
-
-export interface IdentifyContactResponse {
-    contact : Contact
 }
