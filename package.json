@@ -4,6 +4,9 @@
     "typescript": "^5.1.6"
   },
   "scripts": {
-    "start_dev" : "npx tsc && node build/main.js"
+    "start_dev": "npx tsc && node build/main.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }

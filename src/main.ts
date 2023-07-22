@@ -1,1 +1,9 @@
-console.log("hello world !!!!")
+import { startServer } from "./server"
+
+console.log("starting !")
+
+function main(){
+    startServer()
+}
+
+main()
