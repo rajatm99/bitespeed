@@ -1,7 +1,8 @@
 import { httpResponse } from "../dto/common"
 import { IdentifyContactRequest } from "../dto/contact"
+import { Identify } from "./contact"
 
-export function HandleIdentify(req) : httpResponse{
+export async function HandleIdentify(req) :Promise<httpResponse>{
     const body = req.body as IdentifyContactRequest
     
     if(!(body?.email || body?.phonenumber)){
@@ -14,5 +15,8 @@ export function HandleIdentify(req) : httpResponse{
        return response
     }
     
+    const response =  await Identify(body)
+
+    return response
 
 }

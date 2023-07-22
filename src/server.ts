@@ -7,7 +7,7 @@ export function startServer() {
     app.use(bodyParser.json());
 
     app.post('/identify', async function(req, res){
-        const resp = HandleIdentify(req)
+        const resp = await HandleIdentify(req)
         res.status(resp.StatusCode).send(resp.ResponseBody)
     })
 
